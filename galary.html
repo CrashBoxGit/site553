@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Force - Галерея</title>
+    <link rel="stylesheet" href="src/css/galary.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="particles" id="particles-js"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="src/img/Главная страница/logo.png" alt="Game Force Logo">
+            </div>
+            
+            <nav class="navbar">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-list">
+                    <li><a href="main.html">Главная</a></li>
+                    <li><a href="main.html#promo-section">Акции</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="turner.html">Турниры</a></li>
+                    <li><a href="galary.html" class="active">Галерея</a></li>
+                    <li><a href="main.html#contacts">Контакты</a></li>
+                    <li class="auth-buttons">
+                        <a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt fa-lg"></i> Войти</a>
+                        <a href="#" class="btn-register"><i class="fas fa-user-plus fa-lg"></i> Записаться</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Игровая <span class="neon-text">Галерея</span></h1>
+                    <p class="hero-subtitle">Погрузитесь в атмосферу Game Force через наши лучшие моменты</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="interior">Интерьер</button>
+                    <button class="filter-btn" data-filter="tournaments">Турниры</button>
+                    <button class="filter-btn" data-filter="equipment">Оборудование</button>
+                    <button class="filter-btn" data-filter="events">Мероприятия</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Photo 1 -->
+                    <div class="gallery-item" data-category="interior">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test.jpg" alt="Интерьер клуба">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>VIP Зона</h3>
+                                    <p>Комфортные места для премиум-геймеров</p>
+                                
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Photo 2 -->
+                    <div class="gallery-item" data-category="tournaments">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test2.jpg" alt="Турнир по CS:GO">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>CS:GO Турнир</h3>
+                                    <p>Финальный матч сезона 2025</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 3 -->
+                    <div class="gallery-item" data-category="equipment">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test3.jpg" alt="Игровая станция">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>Игровая станция</h3>
+                                    <p>RTX 4090 + i9-13900K</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 4 -->
+                    <div class="gallery-item" data-category="events">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test4.jpg" alt="Киберспортивное мероприятие">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>LAN Party</h3>
+                                    <p>Ежемесячная встреча геймеров</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 5 -->
+                    <div class="gallery-item" data-category="interior">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test5.jpg" alt="Зона отдыха">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>Зона отдыха</h3>
+                                    <p>Место для перерывов между играми</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 6 -->
+                    <div class="gallery-item" data-category="tournaments">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test6.jpg" alt="Турнир по Dota 2">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>Dota 2 Чемпионат</h3>
+                                    <p>Призовой фонд 150 000₽</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 7 -->
+                    <div class="gallery-item" data-category="equipment">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test7.jpg" alt="Игровая периферия">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>Профессиональная периферия</h3>
+                                    <p>Механические клавиатуры и 360Hz мониторы</p>
+                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 8 -->
+                    <div class="gallery-item" data-category="events">
+                        <div class="gallery-card">
+                            <button class="btn-view"><i class="fas fa-expand"></i></button>
+                            <img src="src/img/galary/test8.jpg" alt="Киберспортивный ивент">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h3>Киберфест 2025</h3>
+                                    <p>Главное событие года</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-load-more">
+                    <button class="btn-load-more">Показать еще</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальное окно для просмотра фото -->
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal-content">
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+                <div class="modal-image-container">
+                    <img src="" alt="" id="modal-image">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://vk.com/gameforceclub"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/crashbox"><i class="fab fa-telegram"></i></a>
+                <a href="https://discord.gg/YwRjzgZkW2"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Game Force. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="src/js/galary.js"></script>
+</body>
+</html>

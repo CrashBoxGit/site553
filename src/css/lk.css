@@ -1,0 +1,999 @@
+:root {
+    --primary: #9f56fa;
+    --primary-dark: #7d3dc8;
+    --accent: #00f0ff;
+    --dark: #0a0412;
+    --light: #ffffff;
+    --text-muted: rgba(255,255,255,0.7);
+    --card-bg: rgba(26, 7, 33, 0.8);
+    --neon-glow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Анимированный фон */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    z-index: -1;
+}
+
+/* Общие стили карточек */
+.cyber-card {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2px;
+    box-shadow: 0 0 15px rgba(159, 86, 250, 0.3);
+    overflow: hidden;
+}
+
+.cyber-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        transparent 45%,
+        var(--primary) 50%,
+        transparent 55%
+    );
+    animation: rotate 6s linear infinite;
+    z-index: -1;
+}
+
+.card-glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(159, 86, 250, 0.1),
+        rgba(0, 240, 255, 0.1)
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cyber-card:hover .card-glitch {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+    background: var(--dark);
+    border-radius: 13px;
+    padding: 30px;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+/* Анимации */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Форма входа */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-container .cyber-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-container .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-container .logo img {
+    height: 60px;
+    filter: drop-shadow(var(--neon-glow));
+}
+
+.auth-container h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
+}
+
+.auth-container h2 span {
+    color: var(--primary);
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    border-bottom: 2px solid rgba(159, 86, 250, 0.3);
+    color: var(--light);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.2);
+}
+
+.input-field .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.input-field input:focus ~ .underline {
+    width: 100%;
+}
+
+.cyber-button {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.cyber-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.cyber-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(159, 86, 250, 0.4);
+}
+
+.cyber-button:hover .btn-overlay {
+    left: 100%;
+}
+
+.error-msg {
+    color: #ff3c3c;
+    text-align: center;
+    margin-top: 15px;
+    min-height: 20px;
+    font-size: 14px;
+}
+
+/* Личный кабинет */
+.lk-container {
+    display: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.lk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(159, 86, 250, 0.3);
+}
+
+.user-greeting h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px var(--primary);
+}
+
+.user-greeting h1 span {
+    color: var(--accent);
+}
+
+.user-greeting p {
+    color: var(--text-muted);
+}
+
+.logout-btn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--light);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 60, 60, 0.2);
+    color: #ff3c3c;
+    transform: rotate(180deg);
+}
+
+/* Карта лояльности */
+.loyalty-section {
+    margin-bottom: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-header h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+}
+
+.card-header h3 span {
+    color: var(--accent);
+}
+
+.card-level {
+    background: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.user-data p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.user-data span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.qr-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.qr-code {
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.qr-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: var(--accent);
+    border-style: solid;
+    border-width: 0;
+}
+
+.corner.tl {
+    top: 0;
+    left: 0;
+    border-top-width: 3px;
+    border-left-width: 3px;
+    border-radius: 5px 0 0 0;
+}
+
+.corner.tr {
+    top: 0;
+    right: 0;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-radius: 0 5px 0 0;
+}
+
+.corner.bl {
+    bottom: 0;
+    left: 0;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-radius: 0 0 0 5px;
+}
+
+.corner.br {
+    bottom: 0;
+    right: 0;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    border-radius: 0 0 5px 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount-badge, .bonus-points {
+    text-align: center;
+}
+
+.discount-badge span, .bonus-points span {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.discount-badge strong {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.bonus-points strong {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Статистика */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(159, 86, 250, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.stat-info h4 {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.stat-info p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Бонусная программа - исправленная */
+.bonus-section {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.current-progress {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.bonus-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--accent);
+}
+
+.bonus-section p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Стили для качественного штрих-кода */
+.barcode-container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(159, 86, 250, 0.3);
+}
+
+.barcode {
+    display: flex;
+    align-items: flex-end;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.barcode-line {
+    width: 3px;
+    margin-right: 2px;
+    transition: height 0.3s ease;
+}
+
+.barcode-line:nth-child(odd) {
+    height: 50px !important; /* Чередуем высоту */
+}
+
+.barcode-numbers {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+@keyframes progressGlow {
+    0% { 
+        transform: translateX(-100%); /* Начинаем слева от видимой области */
+    }
+    100% { 
+        transform: translateX(100%); /* Заканчиваем справа от видимой области */
+    }
+}
+
+
+.progress-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.7),
+        rgba(255,255,255,0)
+    );
+    transform: translateX(-50%);
+    animation: glowPass 1.5s infinite;
+    z-index: 2;
+}
+
+@keyframes glowPass {
+    0% { left: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+
+
+
+
+
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.bonus-section p {
+    margin: 20px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .lk-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .card-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .qr-container {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container .cyber-card {
+        padding: 20px;
+    }
+    
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Обновленные стили для прогресс-бара ===== */
+
+
+
+
+
+/* ===== Новые стили для QR-кода ===== */
+.qr-code {
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.qr-code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(159, 86, 250, 0.1) 0%,
+        rgba(0, 240, 255, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+}
+
+.qr-code:hover::before {
+    opacity: 1;
+}
+
+/* ===== Улучшения карточки лояльности ===== */
+.card-header {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.card-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent), 
+        transparent);
+}
+
+.card-footer {
+    position: relative;
+    padding-top: 15px;
+}
+
+.card-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary), 
+        transparent);
+}
+
+/* ===== Стили для качественного штрих-кода (fallback) ===== */
+.barcode-container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(159, 86, 250, 0.3);
+}
+
+.barcode {
+    display: flex;
+    align-items: flex-end;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.barcode-line {
+    width: 3px;
+    margin-right: 2px;
+    transition: height 0.3s ease;
+}
+
+.barcode-line:nth-child(odd) {
+    height: 50px !important;
+}
+
+.barcode-numbers {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Стили для красивого QR-кода */
+#qrCode {
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+    padding: 5px;
+    background: var(--dark);
+    box-shadow: 0 0 15px rgba(159, 86, 250, 0.5);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+#qrCode canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+#qrCode:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(159, 86, 250, 0.8);
+}
+
+
+
+/* Конфетти */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Неоновый прогресс-бар */
+/* Прогресс-бар */
+.progress-container {
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(159, 86, 250, 0.3);
+}
+
+.progress-filled {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    width: 0; /* Начальное значение, будет изменено через JS */
+    position: relative;
+    transition: width 0.5s ease;
+    overflow: hidden;
+}
+
+.progress-filled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; /* Начинаем с начала заполненной части */
+    width: 100%; /* Занимаем всю ширину заполненной части */
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4),
+        rgba(255,255,255,0)
+    );
+    animation: progressGlow 2s infinite;
+    transform: translateX(-100%); /* Начальное положение за пределами */
+}
+
+.progress-empty {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transition: width 0.5s ease;
+}
+
+/* Анимации для полного прогресса */
+.progress-filled.complete {
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+    0% { box-shadow: 0 0 5px var(--primary), 0 0 10px var(--accent); }
+    100% { box-shadow: 0 0 15px var(--primary), 0 0 30px var(--accent); }
+}
+
+/* Стильный QR-код в рамке */
+.qr-code {
+    width: 100px;
+    height: 100px;
+    background: #1a0721;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.qr-code canvas {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #9f56fa;
+}
+
+/* Fallback штрих-код */
+.barcode-fallback {
+    display: flex;
+    height: 50px;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.barcode-line {
+    width: 3px;
+    margin-right: 2px;
+    background: #9f56fa;
+}
+
+.barcode-numbers {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Увеличение QR-кода */
+.qr-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,4,18,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.qr-overlay > div {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 30px rgba(159,86,250,0.7);
+}
+
+/* Кликабельность QR-кода */
+#qrCode {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#qrCode:hover {
+    transform: scale(1.03);
+}
+
+/* Стили для увеличенного QR-кода */
+.expanded-qr-container {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 30px rgba(159, 86, 250, 0.7);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.expanded-qr-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(159, 86, 250, 0.1) 0%,
+        rgba(0, 240, 255, 0.1) 100%
+    );
+    z-index: -1;
+}
+
+.expanded-qr-container canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 5px;
+    background: white;
+}
+
+.qr-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 4, 18, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Кликабельность QR-кода */
+#qrCode {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#qrCode:hover {
+    transform: scale(1.03);
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(159, 86, 250, 0.7);
+}
+
+.qr-code {
+    transition: all 0.3s ease;
+}

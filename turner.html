@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Force - Турниры</title>
+    <link rel="stylesheet" href="src/css/turner.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="src/js/turner.js"></script>
+</head>
+
+<body>
+    
+    <div class="background-wrapper">
+        <div class="particles" id="particles-js"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="src/img/Главная страница/logo.png" alt="Game Force Logo">
+            </div>
+            
+            <nav class="navbar">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-list">
+                    <li><a href="main.html">Главная</a></li>
+                    <li><a href="main.html#promo-section">Акции</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="turner.html" class="active">Турниры</a></li>
+                    <li><a href="galary.html">Галерея</a></li>
+                    <li><a href="main.html#contacts">Контакты</a></li>
+                    <li class="auth-buttons">
+                        <a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt fa-lg"></i> Войти</a>
+                        <a href="#" class="btn-register"><i class="fas fa-user-plus fa-lg"></i> Записаться</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+
+        <!-- Текущие турниры -->
+        <section id="current-tournaments" class="current-tournaments">
+            <div class="container">
+                <h2 class="section-title">ТЕКУЩИЕ <span>ТУРНИРЫ</span></h2>
+                <p class="section-subtitle">Присоединяйся прямо сейчас и сражайся за победу!</p>
+                
+                <div class="tournaments-grid">
+                    <!-- Турнир 1 -->
+                    <div class="tournament-card">
+                        <div class="tournament-header">
+                            <div class="game-logo">
+                                <img src="src/img/turner/gameicon/League of Legends.png" alt="League of Legends">
+                            </div>
+                            <div class="tournament-info">
+                                <h3>LEAGUE OF LEGENDS</h3>
+                                <div class="prize-pool">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Призовой фонд: 150,000₽</span>
+                                </div>
+                            </div>
+                            <div class="tournament-status live">
+                                <i class="fas fa-circle"></i>
+                                <span>LIVE</span>
+                            </div>
+                        </div>
+                        <div class="tournament-body">
+                            <div class="tournament-details">
+                                <div class="detail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Сегодня, 19:00</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-users"></i>
+                                    <span>5v5</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Основная зона</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="progress-text">20/20 команд</div>
+                            </div>
+                        </div>
+                        <div class="tournament-footer">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfI-gD-KT4proXmU6HySqudguLIOliLQ8K4tf7dMtFGkaFYIA/viewform?usp=dialog" class="btn-register">Зарегистрироваться</a>
+                            <a href="#" class="btn-watch"><i class="fas fa-eye"></i> Смотреть</a>
+                        </div>
+                        <div class="tournament-glow"></div>
+                    </div>
+
+                    <!-- Турнир 2 -->
+                    <div class="tournament-card">
+                        <div class="tournament-header">
+                            <div class="game-logo">
+                                <img src="src/img/turner/gameicon/CSGO.png" alt="CS:GO">
+                            </div>
+                            <div class="tournament-info">
+                                <h3>COUNTER-STRIKE 2</h3>
+                                <div class="prize-pool">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Призовой фонд: 200,000₽</span>
+                                </div>
+                            </div>
+                            <div class="tournament-status starting">
+                                <i class="fas fa-clock"></i>
+                                <span>СКОРО СТАРТ</span>
+                            </div>
+                        </div>
+                        <div class="tournament-body">
+                            <div class="tournament-details">
+                                <div class="detail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Завтра, 18:00</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-users"></i>
+                                    <span>5v5</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>VIP зона</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="progress-text">13/20 команд</div>
+                            </div>
+                        </div>
+                        <div class="tournament-footer">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfI-gD-KT4proXmU6HySqudguLIOliLQ8K4tf7dMtFGkaFYIA/viewform?usp=dialog" class="btn-register">Зарегистрироваться</a>
+                            <a href="#" class="btn-watch"><i class="fas fa-bell"></i> Напомнить</a>
+                        </div>
+                        <div class="tournament-glow"></div>
+                    </div>
+
+                    <!-- Турнир 3 -->
+                    <div class="tournament-card">
+                        <div class="tournament-header">
+                            <div class="game-logo">
+                                <img src="src/img/turner/gameicon/dota2.png" alt="Dota 2">
+                            </div>
+                            <div class="tournament-info">
+                                <h3>DOTA 2</h3>
+                                <div class="prize-pool">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Призовой фонд: 250,000₽</span>
+                                </div>
+                            </div>
+                            <div class="tournament-status registration">
+                                <i class="fas fa-user-plus"></i>
+                                <span>РЕГИСТРАЦИЯ</span>
+                            </div>
+                        </div>
+                        <div class="tournament-body">
+                            <div class="tournament-details">
+                                <div class="detail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>25.06.2025, 17:00</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-users"></i>
+                                    <span>5v5</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Турнирная зона</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="progress-text">7/20 команд</div>
+                            </div>
+                        </div>
+                        <div class="tournament-footer">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfI-gD-KT4proXmU6HySqudguLIOliLQ8K4tf7dMtFGkaFYIA/viewform?usp=dialog" class="btn-register">Зарегистрироваться</a>
+                            <a href="#" class="btn-watch"><i class="fas fa-bell"></i> Напомнить</a>
+                        </div>
+                        <div class="tournament-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Предстоящие турниры -->
+        <section id="upcoming-tournaments" class="upcoming-tournaments">
+            <div class="container">
+                <h2 class="section-title">БУДУЩИЕ <span>ТУРНИРЫ</span></h2>
+                <p class="section-subtitle">Готовься к новым вызовам и следи за расписанием</p>
+                
+                <div class="timeline">
+                    <!-- Турнир 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date">30</div>
+                            <div class="month">ИЮНЯ</div>
+                            <div class="year">2025</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="game-icon">
+                                <img src="src/img/turner/gameicon/valorant.png" alt="Valorant">
+                            </div>
+                            <div class="timeline-info">
+                                <h3>VALORANT CHAMPIONSHIP</h3>
+                                <div class="timeline-details">
+                                    <span><i class="fas fa-trophy"></i> 300,000₽</span>
+                                    <span><i class="fas fa-users"></i> 5v5</span>
+                                    <span><i class="fas fa-clock"></i> 18:00</span>
+                                </div>
+                                <p>Ежемесячный чемпионат по Valorant с участием топовых команд города</p>
+                            </div>
+                            <div class="timeline-actions">
+                                <a href="#" class="btn-notify"><i class="fas fa-bell"></i> Напомнить</a>
+                                <div class="days-left">Через 12 дней</div>
+                            </div>
+                            <div class="timeline-glow"></div>
+                            
+                        </div>
+                        <div class="timeline-arrows">
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Турнир 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date">07</div>
+                            <div class="month">ИЮЛЯ</div>
+                            <div class="year">2025</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="game-icon">
+                                <img src="src/img/turner/gameicon/owerwatch2.png" alt="Overwatch 2">
+                            </div>
+                            <div class="timeline-info">
+                                <h3>OVERWATCH 2 SHOWDOWN</h3>
+                                <div class="timeline-details">
+                                    <span><i class="fas fa-trophy"></i> 180,000₽</span>
+                                    <span><i class="fas fa-users"></i> 6v6</span>
+                                    <span><i class="fas fa-clock"></i> 16:00</span>
+                                </div>
+                                <p>Еженедельные соревнования по Overwatch 2 с прямыми трансляциями</p>
+                            </div>
+                            <div class="timeline-actions">
+                                <a href="#" class="btn-notify"><i class="fas fa-bell"></i> Напомнить</a>
+                                <div class="days-left">Через 19 дней</div>
+                            </div>
+                            <div class="timeline-glow"></div>
+                        </div>
+                        <div class="timeline-arrows">
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                            
+                        </div>
+                        <div class="timeline-arrows">
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Турнир 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date">14</div>
+                            <div class="month">ИЮЛЯ</div>
+                            <div class="year">2025</div>
+                        </div>
+                        <div class="timeline-arrows">
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                            <div class="timeline-arrow"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="game-icon">
+                                <img src="src/img/turner/gameicon/fortnite.png" alt="Fortnite">
+                            </div>
+                            <div class="timeline-info">
+                                <h3>FORTNITE BATTLE ROYALE</h3>
+                                <div class="timeline-details">
+                                    <span><i class="fas fa-trophy"></i> 120,000₽</span>
+                                    <span><i class="fas fa-users"></i> Solo/Duo</span>
+                                    <span><i class="fas fa-clock"></i> 15:00</span>
+                                </div>
+                                <p>Крупнейший Fortnite турнир в регионе с участием стримеров</p>
+                            </div>
+                            <div class="timeline-actions">
+                                <a href="#" class="btn-notify"><i class="fas fa-bell"></i> Напомнить</a>
+                                <div class="days-left">Через 26 дней</div>
+                            </div>
+                            <div class="timeline-glow"></div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Турнир 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date">21</div>
+                            <div class="month">ИЮЛЯ</div>
+                            <div class="year">2025</div>
+                        </div>
+                        
+                        <div class="timeline-content">
+                            <div class="game-icon">
+                                <img src="src/img/turner/gameicon/Minecraft.png" alt="Minecraft">
+                            </div>
+                            <div class="timeline-info">
+                                <h3>MINECRAFT MINI-GAME BATTLE</h3>
+                                <div class="timeline-details">
+                                    <span><i class="fas fa-trophy"></i> 90,000₽</span>
+                                    <span><i class="fas fa-users"></i> 3v3</span>
+                                    <span><i class="fas fa-clock"></i> 14:00</span>
+                                </div>
+                                <p>Соревнования в касмонной мини-игре на выживание</p>
+                            </div>
+                            <div class="timeline-actions">
+                                <a href="#" class="btn-notify"><i class="fas fa-bell"></i> Напомнить</a>
+                                <div class="days-left">Через 33 дня</div>
+                            </div>
+                            <div class="timeline-glow"></div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Прошедшие турниры -->
+        <section class="past-tournaments">
+            <div class="container">
+                <h2 class="section-title">ПРОШЕДШИЕ <span>ТУРНИРЫ</span></h2>
+                <p class="section-subtitle">Победители и результаты завершенных соревнований</p>
+                
+                <div class="winners-grid">
+                    <!-- Победитель 1 -->
+                    <div class="winner-card">
+                        <div class="winner-header">
+                            <div class="game-logo">
+                                <img src="src/img/turner/gameicon/CSGO.png" alt="CS:GO">
+                            </div>
+                            <h3>CS2 CHAMPIONSHIP</h3>
+                            <div class="tournament-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>15.05.2025</span>
+                            </div>
+                        </div>
+                        <div class="winner-body">
+                            <div class="winner-team">
+                                <div class="team-logo">
+                                    <img src="src/img/turner/TeamLogo/team3.jpg" alt="Team Logo">
+                                </div>
+                                <div class="team-info">
+                                    <h4>TEAM PHOENIX</h4>
+                                    <div class="team-members">
+                                        <span>Inferno</span>
+                                        <span>Ashen</span>
+                                        <span>Scorch</span>
+                                        <span>Pyre</span>
+                                        <span>Radiance</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prize-info">
+                                <div class="prize-amount">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>100,000₽</span>
+                                </div>
+                                <div class="match-score">
+                                    <span>16:14</span>
+                                    <span>FINAL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winner-footer">
+                            <a href="#" class="btn-highlights"><i class="fas fa-play"></i> Смотреть запись</a>
+                        </div>
+                        <div class="winner-glow"></div>
+                    </div>
+
+                    <!-- Победитель 2 -->
+                    <div class="winner-card">
+                        <div class="winner-header">
+                            <div class="game-logo">
+                                <img src="src/img/turner/gameicon/League of Legends.png" alt="League of Legends">
+                            </div>
+                            <h3>LOL SPRING CUP</h3>
+                            <div class="tournament-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>22.04.2025</span>
+                            </div>
+                        </div>
+                        <div class="winner-body">
+                            <div class="winner-team">
+                                <div class="team-logo">
+                                    <img src="src/img/turner/TeamLogo/team2.jpg" alt="Team Logo">
+                                </div>
+                                <div class="team-info">
+                                    <h4>DRAGON SLAYERS</h4>
+                                    <div class="team-members">
+                                        <span>Specter</span>
+                                        <span>Revolt</span>
+                                        <span>Phantom</span>
+                                        <span>Abyss</span>
+                                        <span>Vortex</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prize-info">
+                                <div class="prize-amount">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>120,000₽</span>
+                                </div>
+                                <div class="match-score">
+                                    <span>3:2</span>
+                                    <span>BO5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winner-footer">
+                            <a href="#" class="btn-highlights"><i class="fas fa-play"></i> Смотреть запись</a>
+                        </div>
+                        <div class="winner-glow"></div>
+                    </div>
+
+                    <!-- Победитель 3 -->
+                    <div class="winner-card">
+                        <div class="winner-header">
+                            <div class="game-logo">
+                                <img src="src/img/turner/gameicon/dota2.png" alt="Dota 2">
+                            </div>
+                            <h3>DOTA 2 BATTLE</h3>
+                            <div class="tournament-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>08.04.2025</span>
+                            </div>
+                        </div>
+                        <div class="winner-body">
+                            <div class="winner-team">
+                                <div class="team-logo">
+                                    <img src="src/img/turner/TeamLogo/logo1.png" alt="Team Logo">
+                                </div>
+                                <div class="team-info">
+                                    <h4>ANCIENT GUARDIANS</h4>
+                                    <div class="team-members">
+                                        <span>Sentinel</span>
+                                        <span>Warden</span>
+                                        <span>Custodian</span>
+                                        <span>Griffin</span>
+                                        <span>Phalanx</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prize-info">
+                                <div class="prize-amount">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>150,000₽</span>
+                                </div>
+                                <div class="match-score">
+                                    <span>2:1</span>
+                                    <span>BO3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winner-footer">
+                            <a href="#" class="btn-highlights"><i class="fas fa-play"></i> Смотреть запись</a>
+                        </div>
+                        <div class="winner-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Правила турниров -->
+        <section class="tournament-rules">
+            <div class="container">
+                <h2 class="section-title">ПРАВИЛА <span>ТУРНИРОВ</span></h2>
+                <p class="section-subtitle">Ознакомься с правилами перед участием</p>
+                
+                <div class="rules-accordion">
+                    <!-- Правило 1 -->
+                    <div class="rule-item">
+                        <div class="rule-header">
+                            <h3><i class="fas fa-user-check"></i> Регистрация и участие</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="rule-content">
+                            <p>Для участия в турнире необходимо:</p>
+                            <ul>
+                                <li>Зарегистрироваться на сайте или в клубе не позднее, чем за 1 час до начала турнира</li>
+                                <li>Оплатить регистрационный взнос (если предусмотрен)</li>
+                                <li>Прийти в клуб минимум за 30 минут до начала для проверки оборудования</li>
+                                <li>Иметь при себе удостоверение личности (для подтверждения возраста)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Правило 2 -->
+                    <div class="rule-item">
+                        <div class="rule-header">
+                            <h3><i class="fas fa-gamepad"></i> Игровые правила</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="rule-content">
+                            <p>Основные игровые правила:</p>
+                            <ul>
+                                <li>Запрещено использование читов, багов и любых нечестных способов игры</li>
+                                <li>Запрещено оскорбление соперников и организаторов</li>
+                                <li>Все настройки игры должны соответствовать установленным организатором</li>
+                                <li>В случае технических проблем необходимо немедленно сообщить судье</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Правило 3 -->
+                    <div class="rule-item">
+                        <div class="rule-header">
+                            <h3><i class="fas fa-trophy"></i> Призовые и награды</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="rule-content">
+                            <p>Правила получения призов:</p>
+                            <ul>
+                                <li>Призовые выплачиваются в течение 3 рабочих дней после турнира</li>
+                                <li>Призы могут быть выданы наличными или переводом на карту (по согласованию)</li>
+                                <li>Для получения приза необходимо предоставить паспортные данные</li>
+                                <li>Налоги на призовые выплачиваются победителями самостоятельно</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Правило 4 -->
+                    <div class="rule-item">
+                        <div class="rule-header">
+                            <h3><i class="fas fa-ban"></i> Дисквалификация</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="rule-content">
+                            <p>Причины для дисквалификации:</p>
+                            <ul>
+                                <li>Опоздание более чем на 10 минут без уважительной причины</li>
+                                <li>Грубое нарушение правил турнира</li>
+                                <li>Неспортивное поведение</li>
+                                <li>Попытка обмана организаторов или судей</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призы и награды -->
+        <!-- Призы и награды -->
+<!-- Призы и награды -->
+<section class="prizes-section">
+    <div class="container">
+        <h2 class="section-title">ПРИЗЫ <span>И НАГРАДЫ</span></h2>
+        <p class="section-subtitle">Уникальные вознаграждения для победителей</p>
+        
+        <div class="prizes-carousel">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="prize-card gold">
+                        <div class="card-badge">1 место</div>
+                        <img src="src/img/turner/lenta/money.png" alt="money icon" class="prize-icon">
+                        <div class="prize-content">
+                            <div class="prize-value">300,000₽</div>
+                            <div class="prize-desc">Главный приз чемпионата</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card silver">
+                        <div class="card-badge">2 место</div>
+                        <img src="src/img/turner/lenta/money.png" alt="money icon" class="prize-icon">
+                      
+                        <div class="prize-content">
+                            <div class="prize-value">150,000₽</div>
+                            <div class="prize-desc">Финалистам турнира</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card bronze">
+                        <div class="card-badge">3 место</div>
+                        <img src="src/img/turner/lenta/money.png" alt="money icon" class="prize-icon">
+                       
+                        <div class="prize-content">
+                            <div class="prize-value">50,000₽</div>
+                            <div class="prize-desc">За выход в полуфинал</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Игровые бонусы -->
+                    <div class="prize-card purple">
+                        <div class="card-badge">Бонус</div>
+                        <img src="src/img/turner/lenta/time.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">100 часов</div>
+                            <div class="prize-desc">Игрового времени в VIP-зоне</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card blue">
+                        <div class="card-badge">Бонус</div>
+                        <img src="src/img/turner/lenta/ticket.png" alt="money icon" class="prize-icon">
+                
+                        <div class="prize-content">
+                            <div class="prize-value">5 абонементов</div>
+                            <div class="prize-desc">На турниры (бесплатная регистрация)</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card neon">
+                        <div class="card-badge">Бонус</div>
+                        <img src="src/img/turner/lenta/sale.png" alt="money icon" class="prize-icon">
+                       
+                        <div class="prize-content">
+                            <div class="prize-value">30% скидка</div>
+                            <div class="prize-desc">На услуги клуба на 3 месяца</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Гастрономия -->
+                    <div class="prize-card red">
+                        <div class="card-badge">Гастрономия</div>
+                        <img src="src/img/turner/lenta/food.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Гастро-ужин</div>
+                            <div class="prize-desc">В ресторане клуба на 4 персоны</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card purple">
+                        <div class="card-badge">Гастрономия</div>
+                        <img src="src/img/turner/lenta/food.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Коктейли</div>
+                            <div class="prize-desc">Безлимит на вечер в баре клуба</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card blue">
+                        <div class="card-badge">Гастрономия</div>
+                        <img src="src/img/turner/lenta/food.png" alt="money icon" class="prize-icon">
+                       
+                        <div class="prize-content">
+                            <div class="prize-value">Кофейный сет</div>
+                            <div class="prize-desc">Ежедневно на 1 месяц</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Гаджеты -->
+                    <div class="prize-card gold">
+                        <div class="card-badge">Гаджет</div>
+                        <img src="src/img/turner/lenta/headphones.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Наушники</div>
+                            <div class="prize-desc">Razer BlackShark V2 Pro</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card silver">
+                        <div class="card-badge">Гаджет</div>
+                        <img src="src/img/turner/lenta/mouse.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Мышь</div>
+                            <div class="prize-desc">Logitech G Pro X Superlight</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card bronze">
+                        <div class="card-badge">Гаджет</div>
+                        <img src="src/img/turner/lenta/keyboard.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Клавиатура</div>
+                            <div class="prize-desc">SteelSeries Apex Pro</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <!-- Эксклюзив -->
+                    <div class="prize-card purple">
+                        <div class="card-badge">Эксклюзив</div>
+                        <img src="src/img/turner/lenta/vip.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">VIP-статус</div>
+                            <div class="prize-desc">На 6 месяцев с персональными бонусами</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card gold">
+                        <div class="card-badge">Эксклюзив</div>
+                        <img src="src/img/turner/lenta/кубок.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Кубок</div>
+                            <div class="prize-desc">Именной трофей для чемпиона</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="prize-card silver">
+                        <div class="card-badge">Эксклюзив</div>
+                        <img src="src/img/turner/logo.png" alt="money icon" class="prize-icon">
+                        
+                        <div class="prize-content">
+                            <div class="prize-value">Мерч</div>
+                            <div class="prize-desc">Limited Edition фирменная коллекция</div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ <span>ВОПРОСЫ</span></h2>
+                <p class="section-subtitle">Ответы на популярные вопросы о турнирах</p>
+                
+                <div class="faq-grid">
+                    <!-- Вопрос 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="fas fa-question-circle"></i> Как зарегистрироваться на турнир?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Регистрация доступна на нашем сайте в разделе "Турниры" или непосредственно в клубе у администратора. Для онлайн-регистрации необходимо создать аккаунт, выбрать турнир и заполнить заявку. Регистрация считается завершенной после оплаты взноса (если требуется).</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="fas fa-question-circle"></i> Какие требования к участникам?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Основные требования: возраст от 16 лет (для некоторых турниров - от 18), наличие удостоверения личности, базовые навыки игры. Для командных турниров необходимо заранее сформировать команду и указать всех участников при регистрации.</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="fas fa-question-circle"></i> Можно ли участвовать без своей команды?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, для одиночных турниров (Solo) команда не требуется. Для командных турниров мы организуем "лобби" для поиска команды перед началом соревнований, где вы можете найти себе партнеров.</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="fas fa-question-circle"></i> Можно ли приносить свое оборудование?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, вы можете использовать свою клавиатуру, мышь и наушники. Для подключения собственного оборудования необходимо уведомить администратора заранее. Мониторы и компьютеры используются только клубные.</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="fas fa-question-circle"></i> Как определяется победитель?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Победитель определяется по системе, указанной в правилах конкретного турнира. Обычно это Single Elimination (на выбывание) или Swiss System (круговая система). Все матчи проводятся под наблюдением судей, которые фиксируют результаты.</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="fas fa-question-circle"></i> Можно ли смотреть турниры онлайн?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, большинство наших турниров транслируются на Twitch и YouTube. Ссылки на трансляции публикуются на нашем сайте и в социальных сетях за день до начала турнира. Также доступны записи прошедших турниров.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Game Force. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+        const header = item.querySelector('.faq-question');
+    
+        header.addEventListener('click', () => {
+        // Закрываем все другие открытые элементы FAQ
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+            }
+        });
+        
+        // Переключаем текущий элемент FAQ
+        item.classList.toggle('active');
+        });
+        });
+        </script>
+
+
+<script>
+    function initPrizeCarousel() {
+    const track = document.querySelector('.carousel-track');
+    if (!track || track.dataset.initialized) return;
+    
+    // Помечаем как инициализированный
+    track.dataset.initialized = 'true';
+    
+    // Клонируем карточки
+    const cards = track.children;
+    const cardCount = cards.length;
+    for (let i = 0; i < cardCount; i++) {
+        track.appendChild(cards[i].cloneNode(true));
+    }
+    
+    // Рассчитываем ширину
+    const firstCard = track.querySelector('.prize-card');
+    if (!firstCard) return;
+    
+    const cardStyle = window.getComputedStyle(firstCard);
+    const cardWidth = firstCard.offsetWidth + 
+                     parseInt(cardStyle.marginLeft) + 
+                     parseInt(cardStyle.marginRight) +
+                     30; // gap
+    
+    // Устанавливаем ширину трека
+    track.style.width = `${cardWidth * cardCount * 2}px`;
+    
+    // Анимация
+    track.style.animation = `scroll ${cardCount * 3}s linear infinite`;
+    
+    // Стили для анимации
+    const styleId = 'prize-carousel-style';
+    if (!document.getElementById(styleId)) {
+        const style = document.createElement('style');
+        style.id = styleId;
+        style.textContent = `
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-${cardWidth * cardCount}px); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    // Пауза при наведении
+    track.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    
+    track.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+}
+
+// Запускаем после полной загрузки
+if (document.readyState === 'complete') {
+    initPrizeCarousel();
+} else {
+    document.addEventListener('DOMContentLoaded', initPrizeCarousel);
+    window.addEventListener('load', initPrizeCarousel);
+}
+</script>
+
+<script src="src/js/turner.js"></script>
+<script src="path/to/particles.js"></script>
+<script src="path/to/jquery.js"></script>
+<script src="path/to/tilt.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Force - Главная</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <div class="particles" id="particles-js"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="src/img/Главная страница/logo.png" alt="Game Force Logo">
+            </div>
+            
+            <nav class="navbar">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-list">
+                    <li><a href="main.html" class="active">Главная</a></li>
+                    <li><a href="#promo-section">Акции</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="turner.html">Турниры</a></li>
+                    <li><a href="galary.html">Галерея</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li class="auth-buttons">
+                        <a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt fa-lg"></i> Войти</a>
+                        <a href="#" class="btn-register"><i class="fas fa-user-plus fa-lg"></i> Записаться</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Погрузитесь в <span class="neon-text">Game Force</span>!</h1>
+                    <p class="hero-subtitle">Лучшее игровое пространство для отдыха и соревнований!</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Забронировать</a>
+                        <a href="#" class="btn-secondary">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="src/img/Главная страница/photoglav.png" alt="Игровая зона">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wow-features">
+            <div class="container">
+              <h2 class="section-title">GAME FORCE — ЭТО <span>ДРУГОЙ УРОВЕНЬ</span></h2>
+              
+              <!-- Таймер турнира -->
+              <div class="tournament-timer">
+                <p>Следующий турнир через:</p>
+                <div class="timer">
+                  <span id="days">07</span>:<span id="hours">23</span>:<span id="minutes">59</span>:<span id="seconds">59</span>
+                </div>
+              </div>
+          
+              <div class="wow-grid">
+                <!-- Карточка 1 -->
+                <div class="wow-card">
+                  <div class="card-bg" style="background-image: url('img/gaming-room.jpg')"></div>
+                  <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>ИГРОВЫЕ <span>БОЕВЫЕ СТАНЦИИ</span></h3>
+                    <ul>
+                      <li><i class="fas fa-microchip"></i> RTX 4090 + i9-13900K</li>
+                      <li><i class="fas fa-tachometer-alt"></i> 360Hz мониторы</li>
+                      <li><i class="fas fa-keyboard"></i> Механические клавиатуры</li>
+                    </ul>
+                    <div class="glow"></div>
+                  </div>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="wow-card">
+                  <div class="card-bg" style="background-image: url('img/vip-room.jpg')"></div>
+                  <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-crown"></i></div>
+                    <h3>VIP <span>КОМНАТЫ</span></h3>
+                    <ul>
+                      <li><i class="fas fa-couch"></i> Диваны с массажем</li>
+                      <li><i class="fas fa-cocktail"></i> Персональный бармен</li>
+                      <li><i class="fas fa-tv"></i> 8K OLED-экраны</li>
+                    </ul>
+                    <div class="glow"></div>
+                  </div>
+                </div>
+                
+                <!-- Карточка 3 -->
+                <div class="wow-card">
+                  <div class="card-bg" style="background-image: url('img/food-zone.jpg')"></div>
+                  <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>GAMER <span>FUEL</span></h3>
+                    <ul>
+                      <li><i class="fas fa-bolt"></i> Безлимитные энергетики</li>
+                      <li><i class="fas fa-hamburger"></i> Горячие снэки 24/7</li>
+                      <li><i class="fas fa-pizza-slice"></i> Автоматы с пиццей</li>
+                    </ul>
+                    <div class="glow"></div>
+                  </div>
+                </div>
+                <!-- Карточка 4 -->
+                <div class="wow-card">
+                    <div class="card-bg" style="background-image: url('img/duo-room.jpg')"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-user-friends"></i></div>
+                        <h3>КОМНАТЫ <span>НА ДВОИХ</span></h3>
+                    <ul>
+                        <li><i class="fas fa-gamepad"></i> 2 топовых ПК + звукоизоляция</li>
+                        <li><i class="fas fa-video"></i> Готовые стрим-станции</li>
+                        <li><i class="fas fa-couch"></i> Удобные диваны для совместных игр</li>
+                    </ul>
+                    <div class="glow"></div>
+                </div>
+            </div>
+  
+    <!-- Карточка 5 -->
+                <div class="wow-card">
+                    <div class="card-bg" style="background-image: url('img/gamer-kitchen.jpg')"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>ИГРОВАЯ <span>КУХНЯ</span></h3>
+                    <ul>
+                        <li><i class="fas fa-hamburger"></i> Необычные блюда для геймеров</li>
+                        <li><i class="fas fa-coffee"></i> Авторские энергетические коктейли</li>
+                        <li><i class="fas fa-tags"></i> Специальные цены для клиентов клуба</li>
+                    </ul>
+                    <div class="glow"></div>
+                </div>
+                </div>
+  <!-- 6-я карточка (поддержка) -->
+                <div class="wow-card">
+                    <div class="card-bg" style="background-image: url('img/support-bg.jpg')"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-headset"></i></div>
+                        <h3>ПОДДЕРЖКА <span>24/7</span></h3>
+                    <ul>
+                        <li><i class="fas fa-bolt"></i> Мгновенное решение вопросов</li>
+                        <li><i class="fas fa-magic"></i> Персональные рекомендации</li>
+                        <li><i class="fas fa-shield-alt"></i> Гарантия комфорта</li>
+                    </ul>
+                    <div class="glow"></div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="promo-section" id="promo-section">
+            <div class="container">
+              <h2 class="section-title">ГОРЯЧИЕ <span>АКЦИИ</span></h2>
+
+              <div class="promo-slider">
+                <!-- Акция 1 -->
+                <div class="promo-card active">
+                  <div class="promo-tag">ВЕЧНАЯ АКЦИЯ</div>
+                  <div class="promo-bg" style="background-image: url('src/img/bonus-hour.jpg')"></div>
+                  <div class="promo-content">
+                    <h3>ИГРАЙ БОЛЬШЕ</h3>
+                    <p>Оплати 5 часов - получи 6-й час в подарок</p>
+                    <ul>
+                      <li><i class="fas fa-coins"></i> Накопительные бонусы</li>
+                      <li><i class="fas fa-user-friends"></i> Работает для компаний</li>
+                      <li><i class="fas fa-infinity"></i> Без ограничений по времени</li>
+                    </ul>
+                    <button class="btn-promo">АКТИВИРОВАТЬ</button>
+                  </div>
+                  <div class="promo-glow"></div>
+                </div>
+
+              <!-- Акция 2 -->
+              <div class="promo-card">
+                <div class="promo-tag">08:00-12:00</div>
+                <div class="promo-bg" style="background-image: url('src/img/morning-session.jpg')"></div>
+                <div class="promo-content">
+                  <h3>УТРЕННИЙ БУСТЕР</h3>
+                  <p>30% скидка на все места утром</p>
+                  <ul>
+                    <li><i class="fas fa-coffee"></i> Кофе в подарок</li>
+                    <li><i class="fas fa-sun"></i> Только будние дни</li>
+                    <li><i class="fas fa-clock"></i> Минимум 2 часа</li>
+                  </ul>
+                  <button class="btn-promo">ЗАБРОНИРОВАТЬ</button>
+                </div>
+                <div class="promo-glow"></div>
+              </div>
+
+              <!-- Акция 3 -->
+              <div class="promo-card">
+                <div class="promo-tag">МЕСЯЧНЫЙ АБОНЕМЕНТ</div>
+                <div class="promo-bg" style="background-image: url('src/img/subscription.jpg')"></div>
+                <div class="promo-content">
+                  <h3>КИБЕР-ПОДПИСКА</h3>
+                  <p>100 часов за 20 000₽ вместо 25 000₽</p>
+                  <ul>
+                    <li><i class="fas fa-calendar-check"></i> Заморозка на 14 дней</li>
+                    <li><i class="fas fa-ticket-alt"></i> 1 бесплатный турнир</li>
+                    <li><i class="fas fa-percentage"></i> Скидка 10% на еду</li>
+                  </ul>
+                  <button class="btn-promo">ПОДПИСАТЬСЯ</button>
+                </div>
+                <div class="promo-glow"></div>
+              </div>
+                
+                <!-- Акция 2 -->
+                <div class="promo-card">
+                  <div class="promo-tag">До 30.06.2025</div>
+                  <div class="promo-bg" style="background-image: url('src/img/img3.akspic.ru-skazhi_igru-lyudo_king-kosti-igra_v_kosti-azartnaya_igra-1407x3045.jpg')"></div>
+                  <div class="promo-content">
+                    <h3>ДРУЖЕСКИЙ КВАНТ</h3>
+                    <p>Приведи 3 друзей - получи 5 часов игры бесплатно</p>
+                    <ul>
+                      <li><i class="fas fa-users"></i> Для компаний от 4 человек</li>
+                      <li><i class="fas fa-pizza-slice"></i> Пицца в подарок</li>
+                    </ul>
+                    <button class="btn-promo">ПОЛУЧИТЬ</button>
+                  </div>
+                  <div class="promo-glow"></div>
+                </div>
+                
+                <div class="promo-nav">
+                  <button class="promo-prev"><i class="fas fa-chevron-left"></i></button>
+                  <div class="promo-dots"></div>
+                  <button class="promo-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section class="tournaments">
+            <div class="container">
+                <div class="tournament-banner">
+                    <img src="src/img/Главная страница/znak.png" alt="Турнир">
+                    <h3>Киберспортивный турнир</h3>
+                    <img src="src/img/Главная страница/znak.png" alt="Турнир">
+                    <h3>Киберспортивный турнир</h3>
+                    <img src="src/img/Главная страница/znak.png" alt="Турнир">
+                    <h3>Киберспортивный турнир</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+          <div class="container">
+              <div class="about-content">
+                  <h2 class="section-title">О нашем клубе</h2>
+                  <div class="about-text">
+                      <p>Game Force - это современное игровое пространство с топовым оборудованием, комфортными местами и атмосферой настоящего киберспорта.</p>
+                      <p>Мы предлагаем не только мощные игровые компьютеры, но и регулярные турниры с призовыми фондами.</p>
+                      <div class="stats-grid">
+                          <div class="stat-item">
+                              <div class="stat-number" data-count="275">0</div>
+                              <div class="stat-label">Игровых ПК</div>
+                          </div>
+                          <div class="stat-item">
+                              <div class="stat-number" data-count="3">0</div>
+                              <div class="stat-label">Турниров в месяц</div>
+                          </div>
+                          <div class="stat-item">
+                              <div class="stat-number" data-count="2700"><p>0</div>
+                              <div class="stat-label">Довольных клиентов</div>
+                          </div>
+
+                    
+                      </div>
+                  </div>
+              </div>
+              <div class="about-image">
+                  <div class="image-container">
+                      <img src="src/img/Главная страница/logobanner.png" alt="О клубе">
+                      <div class="hover-effect"></div>
+                  </div>
+                  <div class="decorative-elements">
+                    <img src="src/img/Главная страница/Висюлька1.svg" class="decor-1">
+                    <img src="src/img/Главная страница/Висюлька2.svg" class="decor-2">
+                </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <div class="container">
+            <!-- Контактная информация слева -->
+            <div class="contacts-info">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact-item">
+                    <h3><i class="fas fa-map-marker-alt"></i> Адрес:</h3>
+                    <p>г. Санкт-Петербург, Загребский бульвар, 23к1</p>
+                </div>
+                <div class="contact-item">
+                    <h3><i class="fas fa-phone"></i> Телефон:</h3>
+                    <p>+7 (999) 123-45-67</p>
+                </div>
+                <div class="contact-item">
+                    <h3><i class="fas fa-envelope"></i> Email:</h3>
+                    <p>gameforce@mail.ru</p>
+                </div>
+                <div class="contact-item">
+                    <h3><i class="fas fa-clock"></i> Часы работы:</h3>
+                    <p>Круглосуточно, без выходных</p>
+                </div>
+            </div>
+            
+            <!-- Карта справа -->
+            <div class="contacts-map" id="yandex-map"></div>
+        </div>
+    </section>
+    
+    <!-- Подключаем JS-файл с картой -->
+    <script src="src/js/yandex-map.js"></script>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://vk.com/gameforceclub"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/crashbox"><i class="fab fa-telegram"></i></a>
+                <a href="https://discord.gg/YwRjzgZkW2"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Game Force. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="src/js/main1.js"></script>
+</body>
+
+</html>
